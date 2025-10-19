@@ -22,7 +22,7 @@ ChartJS.register(
 );
 
 export const ActivityChart: React.FC = () => {
-  const { topics, comments } = useData();
+  const { topics } = useData();
 
   // Get top 10 most active topics
   const topTopics = topics

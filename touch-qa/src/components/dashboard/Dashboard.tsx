@@ -1,13 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { useData } from '../../contexts/DataContext';
 import { StatsCards } from './StatsCards';
 import { TopicsChart } from './TopicsChart';
 import { CategoryChart } from './CategoryChart';
 import { ActivityChart } from './ActivityChart';
 
 export const Dashboard: React.FC = () => {
-  const { topics, comments } = useData();
 
   return (
     <motion.div

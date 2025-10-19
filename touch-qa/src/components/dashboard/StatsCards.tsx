@@ -4,7 +4,6 @@ import { useData } from '../../contexts/DataContext';
 import { 
   ChatBubbleLeftRightIcon,
   UserGroupIcon,
-  HeartIcon,
   FireIcon
 } from '@heroicons/react/24/outline';
 
@@ -12,8 +11,6 @@ export const StatsCards: React.FC = () => {
   const { topics, comments } = useData();
 
   const totalUsers = JSON.parse(localStorage.getItem('touch_users') || '[]').length;
-  const totalLikes = topics.reduce((sum, topic) => sum + topic.likes, 0);
-  const totalFavorites = topics.reduce((sum, topic) => sum + topic.favorites, 0);
   const hotTopics = topics.filter(topic => 
     topic.likes + topic.commentCount + topic.favorites > 5
   ).length;
